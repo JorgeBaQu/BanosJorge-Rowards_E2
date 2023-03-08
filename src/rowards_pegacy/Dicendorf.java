@@ -11,4 +11,10 @@ public Dicendorf(String nombre,int vida, int afinidad,int resistencia,int plomo,
 	this.inconsciencia=inconsciencia;
 	this.protagonismo=protagonismo;
 }
+public void mostrar() {
+	super.mostrar();
+	System.out.println("Predisposicion: "+ predisposicion);
+	System.out.println("Inconsciencia: "+ inconsciencia);
+	System.out.println("Protagonismo: "+ protagonismo);
+}
 }

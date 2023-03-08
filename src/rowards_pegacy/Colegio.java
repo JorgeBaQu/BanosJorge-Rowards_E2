@@ -9,11 +9,9 @@ ArrayList <Mago> colegio = new ArrayList <Mago>();
 	}
 	public void mostrar() {
 		for(int i=0;i<colegio.size();i++) {
-			System.out.print(colegio.get(i).getNombre()+", ");
-			System.out.print(colegio.get(i).getVida()+", ");
-			System.out.print(colegio.get(i).getAfinidad()+", ");
-			System.out.print(colegio.get(i).getResistencia()+", ");
-			System.out.print(colegio.get(i).getNombre());
+			colegio.get(i).mostrar();
+			System.out.println("-------");
+			
 		}
 		
 	}

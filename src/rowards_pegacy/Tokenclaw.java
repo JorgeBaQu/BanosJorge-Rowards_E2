@@ -13,4 +13,8 @@ public class Tokenclaw extends Mago {
 		this.carisma=carisma;
 		
 	}
+	public void mostrar() {
+		super.mostrar();
+		System.out.println();
+	}
 }

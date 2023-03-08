@@ -10,4 +10,8 @@ public class Meeplepuf extends Mago {
 		this.honor=honor;
 		
 	}
+	public void mostrar() {
+		super.mostrar();
+		System.out.println();
+	}
 }

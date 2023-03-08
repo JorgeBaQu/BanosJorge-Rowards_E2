@@ -11,4 +11,8 @@ public class Sleeverin extends Mago {
 		this.venenoso=venenoso;
 		this.hablar=hablar;
 	}
+	public void mostrar() {
+		super.mostrar();
+		System.out.println();
+	}
 }

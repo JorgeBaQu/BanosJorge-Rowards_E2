@@ -51,6 +51,12 @@ private int plomo;
 	public void setPlomo(int plomo) {
 		this.plomo = plomo;
 	}
-		
+	public void mostrar() {
+		System.out.println("Nombre: "+ nombre );
+		System.out.println("Vida: "+ vida);
+		System.out.println("Afinidad: "+ afinidad);
+		System.out.println("Resistencia: "+ resistencia);
+		System.out.println("Plomo: "+ plomo);
+	}
 	
 }
