@@ -6,7 +6,6 @@ private int vida;
 private int afinidad;
 private int resistencia;
 private int plomo;
-
 	public Mago(){
 		this.nombre="";
 		this.vida=0;
@@ -21,5 +20,37 @@ private int plomo;
 		this.resistencia=resistencia;
 		this.plomo=plomo;
 	}
+	
+		public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public int getVida() {
+		return vida;
+	}
+	public void setVida(int vida) {
+		this.vida = vida;
+	}
+	public int getAfinidad() {
+		return afinidad;
+	}
+	public void setAfinidad(int afinidad) {
+		this.afinidad = afinidad;
+	}
+	public int getResistencia() {
+		return resistencia;
+	}
+	public void setResistencia(int resistencia) {
+		this.resistencia = resistencia;
+	}
+	public int getPlomo() {
+		return plomo;
+	}
+	public void setPlomo(int plomo) {
+		this.plomo = plomo;
+	}
+		
 	
 }
