@@ -11,13 +11,13 @@ ArrayList <Mago> colegio = new ArrayList <Mago>();
 	public void añadir2(Mago magoadd) {
 		boolean comprobar=false;
 		for(int i=0;i<colegio.size();i++) {
-		if(magoadd.getNombre().equals(colegio.get(i).getNombre())) {
-		comprobar=true;
+			if((magoadd.getNombre()).equals(colegio.get(i).getNombre())) {
+			comprobar=true;
+			}
 		}
 		if(comprobar==false){
 			colegio.add(magoadd);
 			}else System.out.println("Error, ya existe un mago con ese nombre");
-		}
 	}
 	public void mostrar() {
 		for(int i=0;i<colegio.size();i++) {
@@ -228,6 +228,14 @@ ArrayList <Mago> colegio = new ArrayList <Mago>();
 						}
 					}while(elegir2!=8);
 				}
+			}
+		}
+	}
+	public void eliminar(String nombre) {
+		for(int i=0;i<colegio.size();i++) {
+			if((colegio.get(i).getNombre()).equalsIgnoreCase(nombre)) {
+				colegio.remove(i);
+				System.out.println("Enhorabuena, "+ nombre + " ha sido eliminado con exito");
 			}
 		}
 	}
