@@ -9,6 +9,7 @@ private int vida;
 private int afinidad;
 private int resistencia;
 private int plomo;
+private LibroHechizos libro;
 	public Mago(){
 		this.nombre="";
 		this.vida=0;
@@ -54,6 +55,12 @@ private int plomo;
 	public void setPlomo(int plomo) {
 		this.plomo = plomo;
 	}
+	public LibroHechizos getLibro() {
+		return libro;
+	}
+	public void setLibro(LibroHechizos libro) {
+		this.libro = libro;
+	}
 	public void mostrar() {
 		System.out.println("Nombre: "+ nombre );
 		System.out.println("Vida: "+ vida);
@@ -61,6 +68,10 @@ private int plomo;
 		System.out.println("Resistencia: "+ resistencia);
 		System.out.println("Plomo: "+ plomo);
 	}
-	
-	
+	public void añadirHech(Hechizo añadirHech) {
+		libro.añadir(añadirHech);
+	}
+	public void mostrarHech() {
+		libro.mostrar();
+	}
 }

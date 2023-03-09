@@ -239,4 +239,18 @@ ArrayList <Mago> colegio = new ArrayList <Mago>();
 			}
 		}
 	}
+	public void mostrarHech() {
+		for(int i=0;i<colegio.size();i++) {
+			colegio.get(i).getNombre();
+			colegio.get(i).mostrarHech();
+			System.out.println("-------");
+		}
+	}
+	public void mostrarHech2(String nombre) {
+		for(int i=0;i<colegio.size();i++) {
+			if(nombre.equalsIgnoreCase(colegio.get(i).getNombre())) {
+			colegio.get(i).mostrarHech();
+			}
+		}
+	}
 }
