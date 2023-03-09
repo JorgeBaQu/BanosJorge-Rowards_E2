@@ -4,7 +4,7 @@ import java.util.Random;
 public class Tokenclaw extends Mago {
 	private int arrojo;
 	private int carisma;
-	
+	private String casa = "tokenclaw";
 	private Random r = new Random();
 	private int pelos=r.nextInt(8+1);
 	public Tokenclaw(String nombre,int vida, int afinidad,int resistencia,int plomo, int arrojo,int carisma) {
@@ -15,6 +15,20 @@ public class Tokenclaw extends Mago {
 	}
 	public void mostrar() {
 		super.mostrar();
-		System.out.println();
+		System.out.println("Casa: "+ casa);
+		System.out.println("Arrojo: "+ arrojo);
+		System.out.println("Carisma: "+ carisma);
+	}
+	public int getArrojo() {
+		return arrojo;
+	}
+	public void setArrojo(int arrojo) {
+		this.arrojo = arrojo;
+	}
+	public int getCarisma() {
+		return carisma;
+	}
+	public void setCarisma(int carisma) {
+		this.carisma = carisma;
 	}
 }

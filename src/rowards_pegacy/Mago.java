@@ -1,6 +1,9 @@
 package rowards_pegacy;
 
+import java.util.Scanner;
+
 public class Mago {
+Scanner sc = new Scanner(System.in);
 private String nombre;
 private int vida;
 private int afinidad;
@@ -58,5 +61,6 @@ private int plomo;
 		System.out.println("Resistencia: "+ resistencia);
 		System.out.println("Plomo: "+ plomo);
 	}
+	
 	
 }
