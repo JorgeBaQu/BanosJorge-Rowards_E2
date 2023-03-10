@@ -81,4 +81,7 @@ private LibroHechizos libro;
 	public void eliminarH(String nombre) {
 		libro.eliminarH(nombre);
 	}
+	public String guardar() {
+		return nombre+";"+vida+";"+afinidad+";"+resistencia+";"+plomo;
+	}
 }

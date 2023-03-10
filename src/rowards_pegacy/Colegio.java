@@ -1,10 +1,16 @@
 package rowards_pegacy;
 import java.util.Scanner;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 
 public class Colegio {
 Scanner sc = new Scanner(System.in);
 ArrayList <Mago> colegio = new ArrayList <Mago>();
+File backup = new File ("backup/backup.txt");
 	public void añadir(Mago magoadd) {
 		colegio.add(magoadd);
 	}
@@ -291,5 +297,21 @@ ArrayList <Mago> colegio = new ArrayList <Mago>();
 		if(comprobar) {
 			colegio.get(a).eliminarH(nombreH);;
 		}else System.out.println("El mago no existe.");
+	}
+	public void guardar() {
+		
+		try {
+			BufferedWriter bw = new BufferedWriter(new FileWriter(backup));
+			for(Mago m: colegio) {
+				bw.write(m.guardar()+";"+m.getLibro().getPaginasT()+";"+m.getLibro().getPaginasO());
+				for(Hechizo h: m.getLibro().hechizos) {
+					bw.write(";"+h.guardarH());
+				}
+				bw.newLine();
+			}
+			bw.close();
+		}catch(IOException e){
+			
+		}
 	}
 }

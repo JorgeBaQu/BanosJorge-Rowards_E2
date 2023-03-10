@@ -37,5 +37,7 @@ public int getProtagonismo() {
 public void setProtagonismo(int protagonismo) {
 	this.protagonismo = protagonismo;
 }
-
+public String guardar() {
+	return casa+";"+super.guardar()+";"+predisposicion+";"+inconsciencia+";"+protagonismo;
+}
 }

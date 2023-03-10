@@ -22,6 +22,7 @@ public void actualizarPag() {
 	paginasO=pagO;
 }
 public int getPaginasO() {
+	actualizarPag();
 	return paginasO;
 }
 public void setPaginasT(int paginasT) {
@@ -29,6 +30,7 @@ public void setPaginasT(int paginasT) {
 }
 public void añadir(Hechizo hechizo) {
 	hechizos.add(hechizo);
+	actualizarPag();
 }
 public void mostrar() {
 	for(int i=0;i<hechizos.size();i++) {
@@ -75,6 +77,7 @@ public void modificarH(String nombre){
 			}
 		}
 	}
+	actualizarPag();
 }
 public void eliminarH(String nombre) {
 	boolean comprobar=false;
@@ -84,10 +87,13 @@ public void eliminarH(String nombre) {
 			comprobar=true;
 			a=i;
 		}
+		
 	}
 	if(comprobar) {
 		hechizos.remove(a);
 		System.out.println("El hechizo ha sido borrado");
 	}
+	actualizarPag();
 }
+
 }

@@ -30,4 +30,7 @@ public class Meeplepuf extends Mago {
 	public void setHonor(int honor) {
 		this.honor = honor;
 	}
+	public String guardar() {
+		return casa+";"+super.guardar()+";"+eficiencia+";"+honor;
+	}
 }

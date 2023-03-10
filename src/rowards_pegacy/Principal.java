@@ -11,17 +11,17 @@ public class Principal {
 		Mago m2 = new Meeplepuf("pedro",100,30,20,150,12,10); 
 		Mago m3 = new Sleeverin("juan",100,30,20,150,12,10,10); 
 		Mago m4 = new Tokenclaw("aaron",100,30,20,150,12,10);
-		Hechizo h1 = new Hechizo("curar+","Te cura un poco de vida y afinidad",6,2,10);
-		Hechizo h2 = new Hechizo("curar++","Te cura vida y afinidad",4,2,15);
-		Hechizo h3 = new Hechizo("curar+++","Te cura mucha vida y afinidad",1,2,20);
-		Hechizo h4 = new Hechizo("ataque+","Hace poco daño",6,2,10);
-		Hechizo h5 = new Hechizo("ataque++","Hace daño",4,2,20);
-		Hechizo h6 = new Hechizo("ataque+++","Hace mucho daño",1,2,30);
-		Hechizo h7 = new Hechizo("confundir+","Pequeña posibilidad de confundir al enemigo",6,2,10);
-		Hechizo h8 = new Hechizo("confundir++","Posibilidad de confundir al enemigo",6,2,10);
-		Hechizo h9 = new Hechizo("confundir+++","Mucha posibilidad de confundir al enemigo",6,2,10);
-		Hechizo h10 = new Hechizo("Bola de fuego","gana de 1",1,1,1);
-		Hechizo h11 = new Hechizo("Defensa","te suma 1 de defensa",6,2,10);
+		Hechizo h1 = new Hechizo("s","curar+","Te cura un poco de vida y afinidad",6,7,10);
+		Hechizo h2 = new Hechizo("s","curar++","Te cura vida y afinidad",4,2,15);
+		Hechizo h3 = new Hechizo("s","curar+++","Te cura mucha vida y afinidad",1,2,20);
+		Hechizo h4 = new Hechizo("a","ataque+","Hace poco daño",6,2,10);
+		Hechizo h5 = new Hechizo("a","ataque++","Hace daño",4,2,20);
+		Hechizo h6 = new Hechizo("a","ataque+++","Hace mucho daño",1,2,30);
+		Hechizo h7 = new Hechizo("c","confundir+","Pequeña posibilidad de confundir al enemigo",6,2,10);
+		Hechizo h8 = new Hechizo("c","confundir++","Posibilidad de confundir al enemigo",6,2,10);
+		Hechizo h9 = new Hechizo("c","confundir+++","Mucha posibilidad de confundir al enemigo",6,2,10);
+		Hechizo h10 = new Hechizo("a","Bola de fuego","gana de 1",1,1,1);
+		Hechizo h11 = new Hechizo("d","Defensa","te suma 1 de defensa",6,2,10);
 		LibroHechizos l1= new LibroHechizos();
 		LibroHechizos l2= new LibroHechizos();
 		LibroHechizos l3= new LibroHechizos();
@@ -181,6 +181,29 @@ public class Principal {
 								System.out.println("Introduce el nombre del mago al que quieras añadir: ");
 								String nombreM= sc.next();
 								sc.nextLine();
+								System.out.println("De que tipo va a ser el hechizo?:");
+								System.out.println("1- Sanacion.");
+								System.out.println("2- Ataque.");
+								System.out.println("3- Defensa.");
+								System.out.println("4- Confusion.");
+								int elegir6 = sc.nextInt();
+								sc.nextLine();
+								String tipo="";
+								switch (elegir6) {
+									case 1:
+										tipo="s";
+										break;
+									case 2:
+										tipo="a";
+										break;
+									case 3:
+										tipo="d";
+										break;
+									case 4:
+										tipo="c";
+										break;
+								
+								}
 								System.out.println("Introduce el nombre del hechizo: ");
 								String nombreH= sc.next();
 								sc.nextLine();
@@ -196,7 +219,7 @@ public class Principal {
 								System.out.println("Introduce el coste del hechizo: ");
 								int costeH= sc.nextInt();
 								sc.nextLine();
-								Hechizo hech = new Hechizo(nombreH,descripcionH,resistH,espacioH,costeH);
+								Hechizo hech = new Hechizo(tipo,nombreH,descripcionH,resistH,espacioH,costeH);
 								colegio.añadirHech(nombreM, hech);
 								break;
 							case 4:	
@@ -222,6 +245,16 @@ public class Principal {
 				case 3:
 					break;
 				case 4:
+					System.out.println("Deseas guardar los datos(1) o cargar el backup(2)?");
+					int elegir7=sc.nextInt();
+					sc.nextLine();
+					switch (elegir7) {
+					case 1:
+						colegio.guardar();
+						break;
+					case 2:
+						break;
+					}
 					break;
 				case 5:
 					break;

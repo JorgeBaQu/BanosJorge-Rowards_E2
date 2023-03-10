@@ -31,4 +31,7 @@ public class Tokenclaw extends Mago {
 	public void setCarisma(int carisma) {
 		this.carisma = carisma;
 	}
+	public String guardar() {
+		return casa+";"+super.guardar()+";"+arrojo+";"+carisma;
+	}
 }

@@ -36,4 +36,7 @@ public class Sleeverin extends Mago {
 	public void setHablar(int hablar) {
 		this.hablar = hablar;
 	}
+	public String guardar() {
+		return casa+";"+super.guardar()+";"+sigilo+";"+venenoso+";"+hablar;
+	}
 }

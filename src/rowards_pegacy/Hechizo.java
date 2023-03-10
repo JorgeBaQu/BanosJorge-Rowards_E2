@@ -1,19 +1,22 @@
 package rowards_pegacy;
 
 public class Hechizo {
+private String tipo;
 private String nombre;
 private String descripcion;
 private int resistencia;
 private int espacio;
 private int coste;
 public Hechizo() {
+	this.tipo="";
 	this.nombre="";
 	this.descripcion="";
 	this.resistencia=0;
 	this.espacio=0;
 	this.coste=0;
 }
-public Hechizo(String nombre,String descripcion, int resistencia, int espacio, int coste) {
+public Hechizo(String tipo, String nombre,String descripcion, int resistencia, int espacio, int coste) {
+	this.tipo=tipo;
 	this.nombre=nombre;
 	this.descripcion=descripcion;
 	this.resistencia=resistencia;
@@ -49,5 +52,8 @@ public int getCoste() {
 }
 public void setCoste(int coste) {
 	this.coste = coste;
+}
+public String guardarH() {
+	return tipo+";"+nombre+";"+descripcion+";"+resistencia+";"+espacio+";"+coste;
 }
 }
