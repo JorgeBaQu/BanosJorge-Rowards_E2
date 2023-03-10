@@ -9,13 +9,13 @@ ArrayList <Mago> colegio = new ArrayList <Mago>();
 		colegio.add(magoadd);
 	}
 	public void añadir2(Mago magoadd) {
-		boolean comprobar=false;
+		boolean comprobar=true;
 		for(int i=0;i<colegio.size();i++) {
 			if((magoadd.getNombre()).equals(colegio.get(i).getNombre())) {
-			comprobar=true;
+			comprobar=false;
 			}
 		}
-		if(comprobar==false){
+		if(comprobar){
 			colegio.add(magoadd);
 			}else System.out.println("Error, ya existe un mago con ese nombre");
 	}
@@ -25,7 +25,7 @@ ArrayList <Mago> colegio = new ArrayList <Mago>();
 			System.out.println("-------");
 			
 		}
-		
+
 	}
 	public void info(String nombre) {
 		for(int i=0;i<colegio.size();i++) {
@@ -42,7 +42,7 @@ ArrayList <Mago> colegio = new ArrayList <Mago>();
 				System.out.println("Que deseas modificar?");
 				if(colegio.get(i) instanceof Dicendorf ) {
 					do {
-						System.out.println("Que desea modificar de su tebeo?:");
+						System.out.println("Que desea modificar de su mago?:");
 						System.out.println("1. Nombre.");
 						System.out.println("2. Vida.");
 						System.out.println("3. Afinidad.");
@@ -91,7 +91,7 @@ ArrayList <Mago> colegio = new ArrayList <Mago>();
 					}while(elegir2!=9);
 				}else if(colegio.get(i) instanceof Tokenclaw ) {
 					do {
-						System.out.println("Que desea modificar de su tebeo?:");
+						System.out.println("Que desea modificar de su mago?:");
 						System.out.println("1. Nombre.");
 						System.out.println("2. Vida.");
 						System.out.println("3. Afinidad.");
@@ -135,7 +135,7 @@ ArrayList <Mago> colegio = new ArrayList <Mago>();
 					}while(elegir2!=8);
 				}else if(colegio.get(i) instanceof Sleeverin ) {
 					do {
-						System.out.println("Que desea modificar de su tebeo?:");
+						System.out.println("Que desea modificar de su mago?:");
 						System.out.println("1. Nombre.");
 						System.out.println("2. Vida.");
 						System.out.println("3. Afinidad.");
@@ -184,7 +184,7 @@ ArrayList <Mago> colegio = new ArrayList <Mago>();
 					}while(elegir2!=9);
 				}else if(colegio.get(i) instanceof Meeplepuf ) {
 					do {
-						System.out.println("Que desea modificar de su tebeo?:");
+						System.out.println("Que desea modificar de su mago?:");
 						System.out.println("1. Nombre.");
 						System.out.println("2. Vida.");
 						System.out.println("3. Afinidad.");
@@ -252,5 +252,44 @@ ArrayList <Mago> colegio = new ArrayList <Mago>();
 			colegio.get(i).mostrarHech();
 			}
 		}
+	}
+	public void añadirHech(String nombre, Hechizo hechizo) {
+		boolean comprobar=false;
+		int a=0;
+		for(int i=0;i<colegio.size();i++) {
+			if(nombre.equalsIgnoreCase(colegio.get(i).getNombre())) {
+				comprobar=true;
+				a=i;
+			}
+		}
+		if(comprobar) {
+			colegio.get(a).añadirHech(hechizo);
+		}else System.out.println("El hechizo no ha sido añadido, escribe bien el nombre del mago");
+	}
+	public void modificarHech(String nombre, String nombreH) {
+		boolean comprobar=false;
+		int a=0;
+		for(int i=0;i<colegio.size();i++) {
+			if(nombre.equalsIgnoreCase(colegio.get(i).getNombre())) {
+				comprobar=true;
+				a=i;
+			}
+		}
+		if(comprobar) {
+			colegio.get(a).modificarH(nombreH);;
+		}else System.out.println("El mago no existe.");
+	}
+	public void eliminarHech(String nombre,String nombreH) {
+		boolean comprobar=false;
+		int a=0;
+		for(int i=0;i<colegio.size();i++) {
+			if(nombre.equalsIgnoreCase(colegio.get(i).getNombre())) {
+				comprobar=true;
+				a=i;
+			}
+		}
+		if(comprobar) {
+			colegio.get(a).eliminarH(nombreH);;
+		}else System.out.println("El mago no existe.");
 	}
 }

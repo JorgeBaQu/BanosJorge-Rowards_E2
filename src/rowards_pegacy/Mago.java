@@ -72,6 +72,13 @@ private LibroHechizos libro;
 		libro.añadir(añadirHech);
 	}
 	public void mostrarHech() {
+		System.out.println("Nombre: "+ nombre);
 		libro.mostrar();
+	}
+	public void modificarH(String nombre) {
+		libro.modificarH(nombre);
+	}
+	public void eliminarH(String nombre) {
+		libro.eliminarH(nombre);
 	}
 }

@@ -25,6 +25,7 @@ public class Principal {
 		LibroHechizos l1= new LibroHechizos();
 		LibroHechizos l2= new LibroHechizos();
 		LibroHechizos l3= new LibroHechizos();
+		LibroHechizos l4= new LibroHechizos();
 		l1.añadir(h1);
 		l1.añadir(h4);
 		l1.añadir(h9);
@@ -37,10 +38,14 @@ public class Principal {
 		l3.añadir(h4);
 		l3.añadir(h8);
 		l3.añadir(h11);
+		l4.añadir(h3);
+		l4.añadir(h4);
+		l4.añadir(h7);
+		l4.añadir(h11);
 		m1.setLibro(l1);
 		m2.setLibro(l3);
 		m3.setLibro(l2);
-		m4.setLibro(l1);
+		m4.setLibro(l4);
 		Colegio colegio = new Colegio();
 		colegio.añadir(m1);
 		colegio.añadir(m2);
@@ -173,10 +178,44 @@ public class Principal {
 								colegio.mostrarHech2(nombre);
 								break;
 							case 3:	
+								System.out.println("Introduce el nombre del mago al que quieras añadir: ");
+								String nombreM= sc.next();
+								sc.nextLine();
+								System.out.println("Introduce el nombre del hechizo: ");
+								String nombreH= sc.next();
+								sc.nextLine();
+								System.out.println("Introduce la descripcion del hechizo: ");
+								String descripcionH= sc.next();
+								sc.nextLine();
+								System.out.println("Introduce la resistencia del hechizo: ");
+								int resistH= sc.nextInt();
+								sc.nextLine();
+								System.out.println("Introduce el espacio del hechizo: ");
+								int espacioH= sc.nextInt();
+								sc.nextLine();
+								System.out.println("Introduce el coste del hechizo: ");
+								int costeH= sc.nextInt();
+								sc.nextLine();
+								Hechizo hech = new Hechizo(nombreH,descripcionH,resistH,espacioH,costeH);
+								colegio.añadirHech(nombreM, hech);
 								break;
 							case 4:	
+								System.out.println("Introduce el nombre del mago al que quieras modificar un hechizo: ");
+								String nombre2= sc.next();
+								sc.nextLine();
+								System.out.println("Introduce el nombre del hechizo al que quieras modificar: ");
+								String nombre3= sc.next();
+								sc.nextLine();
+								colegio.modificarHech(nombre2, nombre3);
 								break;
 							case 5:	
+								System.out.println("Introduce el nombre del mago al que quieras eliminar un hechizo: ");
+								String nombre4= sc.next();
+								sc.nextLine();
+								System.out.println("Introduce el nombre del hechizo que quieras eliminar: ");
+								String nombre5= sc.next();
+								sc.nextLine();
+								colegio.eliminarHech(nombre4, nombre5);
 								break;
 						}
 					break;
