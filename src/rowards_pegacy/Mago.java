@@ -92,4 +92,16 @@ private LibroHechizos libro;
 	public String guardar() {
 		return nombre+";"+vida+";"+afinidad+";"+resistencia+";"+plomo;
 	}
+	public int sanacion() {
+		return 1;
+	}
+	public int ataque() {
+		return 1;
+	}
+	public int defensa() {
+		return 1;
+	}
+	public int confusion() {
+		return 1;
+	}
 }

@@ -39,4 +39,20 @@ public class Meeplepuf extends Mago {
 	public String guardar() {
 		return casa+";"+super.guardar()+";"+eficiencia+";"+honor;
 	}
+	public int sanacion() {
+		int bonif=eficiencia+honor;
+		return bonif;
+	}
+	public int ataque() {
+		int bonif=eficiencia+honor;
+				return bonif;
+	}
+	public int defensa() {
+		int bonif=eficiencia;
+				return bonif;
+	}
+	public int confusion() {
+		int bonif=eficiencia-honor;
+				return bonif;
+	}
 }

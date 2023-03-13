@@ -428,4 +428,20 @@ File backup = new File ("backup/backup.txt");
 		}
 		
 	}
+	public Mago elegir(){
+		Mago ma = null;
+		for(Mago m: colegio) {
+			System.out.println(m.getNombre());
+		}
+		
+		String eleccion=sc.next();
+		sc.nextLine();
+		for(Mago m: colegio) {
+			if(eleccion.equalsIgnoreCase(m.getNombre())) {
+				ma=m;
+			}
+		}
+		return ma;
+	}
+	
 }

@@ -40,4 +40,20 @@ public class Tokenclaw extends Mago {
 	public String guardar() {
 		return casa+";"+super.guardar()+";"+arrojo+";"+carisma;
 	}
+	public int sanacion() {
+		int bonif=arrojo+carisma;
+		return bonif;
+	}
+	public int ataque() {
+		int bonif=arrojo+carisma;
+		return bonif;
+	}
+	public int defensa() {
+		int bonif=carisma-arrojo;
+		return bonif;
+	}
+	public int confusion() {
+		int bonif=arrojo-carisma;
+		return bonif;
+	}
 }

@@ -7,17 +7,18 @@ public class Principal {
 		Scanner sc = new Scanner(System.in);
 		int elegir1;
 		int elegir2;
+		Colegio colegio = new Colegio();
 		//Asi añadí los magos al principio.
-		/*Mago m1 = new Dicendorf("harry",100,30,20,150,12,10,10); 
-		Mago m2 = new Meeplepuf("pedro",100,30,20,150,12,10); 
-		Mago m3 = new Sleeverin("juan",100,30,20,150,12,10,10); 
-		Mago m4 = new Tokenclaw("aaron",100,30,20,150,12,10);
+		Mago m1 = new Dicendorf("harry",30,300,10,150,120,100,100); 
+		Mago m2 = new Meeplepuf("pedro",30,300,10,150,120,100); 
+		Mago m3 = new Sleeverin("juan",30,300,10,150,120,100,100); 
+		Mago m4 = new Tokenclaw("aaron",30,300,10,150,120,100);
 		Hechizo h1 = new Hechizo("s","curar+","Te cura un poco de vida y afinidad",6,7,10);
 		Hechizo h2 = new Hechizo("s","curar++","Te cura vida y afinidad",4,2,15);
 		Hechizo h3 = new Hechizo("s","curar+++","Te cura mucha vida y afinidad",1,2,20);
 		Hechizo h4 = new Hechizo("a","ataque+","Hace poco daño",6,2,10);
 		Hechizo h5 = new Hechizo("a","ataque++","Hace daño",4,2,20);
-		Hechizo h6 = new Hechizo("a","ataque+++","Hace mucho daño",1,2,30);
+		Hechizo h6 = new Hechizo("a","ataque+++","Hace mucho daño",20,2,30);
 		Hechizo h7 = new Hechizo("c","confundir+","Pequeña posibilidad de confundir al enemigo",6,2,10);
 		Hechizo h8 = new Hechizo("c","confundir++","Posibilidad de confundir al enemigo",6,2,10);
 		Hechizo h9 = new Hechizo("c","confundir+++","Mucha posibilidad de confundir al enemigo",6,2,10);
@@ -28,10 +29,9 @@ public class Principal {
 		LibroHechizos l3= new LibroHechizos();
 		LibroHechizos l4= new LibroHechizos();
 		l1.añadir(h1);
-		l1.añadir(h4);
+		l1.añadir(h6);
 		l1.añadir(h9);
 		l1.añadir(h11);
-		l2.añadir(h2);
 		l2.añadir(h5);
 		l2.añadir(h7);
 		l2.añadir(h11);
@@ -50,8 +50,8 @@ public class Principal {
 		colegio.añadir(m1);
 		colegio.añadir(m2);
 		colegio.añadir(m3);
-		colegio.añadir(m4);*/
-		Colegio colegio = new Colegio();
+		colegio.añadir(m4);
+		
 
 		System.out.println("Bienvenido a la plataforma de Rowards Legacy, que desea hacer?");
 		do{
@@ -245,6 +245,12 @@ public class Principal {
 						}
 					break;
 				case 3:
+					System.out.println("Has decidido hacer un duelo, elige a tu primer combatiente: ");
+					Mago duelo1=colegio.elegir();
+					System.out.println("Ahora elige contra quien se enfrentara: ");
+					Mago duelo2=colegio.elegir();
+					Duelo duelo = new Duelo(duelo1,duelo2);
+					duelo.pelea();
 					break;
 				case 4:
 					System.out.println("Deseas guardar los datos(1) o cargar el backup(2)?");

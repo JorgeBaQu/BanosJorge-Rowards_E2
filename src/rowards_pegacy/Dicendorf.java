@@ -46,4 +46,20 @@ public void setProtagonismo(int protagonismo) {
 public String guardar() {
 	return casa+";"+super.guardar()+";"+predisposicion+";"+inconsciencia+";"+protagonismo;
 }
+public int sanacion() {
+	int bonif=predisposicion+protagonismo;
+	return bonif;
+}
+public int ataque() {
+	int bonif = inconsciencia+protagonismo;
+	return bonif;
+}
+public int defensa() {
+	int bonif=inconsciencia;
+	return bonif;
+}
+public int confusion() {
+	int bonif=protagonismo-inconsciencia;
+			return bonif;
+}
 }

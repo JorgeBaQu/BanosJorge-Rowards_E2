@@ -45,4 +45,17 @@ public class Sleeverin extends Mago {
 	public String guardar() {
 		return casa+";"+super.guardar()+";"+sigilo+";"+venenoso+";"+hablar;
 	}
+	
+	public int ataque() {
+		int bonif=sigilo+venenoso+hablar;
+		return bonif;
+	}
+	public int defensa() {
+		int bonif=sigilo;
+				return bonif;
+	}
+	public int confusion() {
+		int bonif=sigilo+hablar;
+		return bonif;
+	}
 }

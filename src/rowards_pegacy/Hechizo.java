@@ -2,6 +2,7 @@ package rowards_pegacy;
 
 public class Hechizo {
 private String tipo;
+
 private String nombre;
 private String descripcion;
 private int resistencia;
@@ -22,6 +23,12 @@ public Hechizo(String tipo, String nombre,String descripcion, int resistencia, i
 	this.resistencia=resistencia;
 	this.espacio=espacio;
 	this.coste=coste;
+}
+public String getTipo() {
+	return tipo;
+}
+public void setTipo(String tipo) {
+	this.tipo = tipo;
 }
 public String getNombre() {
 	return nombre;
