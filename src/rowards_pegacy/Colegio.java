@@ -1,7 +1,9 @@
 package rowards_pegacy;
 import java.util.Scanner;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
@@ -313,5 +315,117 @@ File backup = new File ("backup/backup.txt");
 		}catch(IOException e){
 			
 		}
+	}
+	public void cargar() {
+		try{
+			BufferedReader br = new BufferedReader(new FileReader(backup));
+			String linea;
+			while((linea=br.readLine())!=null) {
+				String[] partes =linea.split(";");
+				if(partes[0].equalsIgnoreCase("dicendorf")) {
+					String nombre= partes[1];
+					ArrayList<Hechizo> hechizos=new ArrayList<Hechizo>();
+					int vida = Integer.parseInt(partes[2]);
+					int afinidad = Integer.parseInt(partes[3]);
+					int resistencia = Integer.parseInt(partes[4]);
+					int plomo = Integer.parseInt(partes[5]);
+					int predisposicion = Integer.parseInt(partes[6]);
+					int inconsciencia = Integer.parseInt(partes[7]);
+					int protagonismo = Integer.parseInt(partes[8]);
+					int pagT = Integer.parseInt(partes[9]);
+					int pagO = Integer.parseInt(partes[10]);
+					for(int i=11;i<partes.length;i+=6) {
+						String tipo =partes[i];
+						String nombre2 = partes[i+1];
+						String descripcion = partes[i+2];
+						int resist = Integer.parseInt(partes[i+3]);
+						int espacio = Integer.parseInt(partes[i+4]);
+						int coste = Integer.parseInt(partes[i+5]);
+						Hechizo hech = new Hechizo(tipo,nombre2,descripcion,resist,espacio,coste);
+						hechizos.add(hech);
+					}
+					LibroHechizos libro = new LibroHechizos(pagT,pagO,hechizos);
+					Mago m1= new Dicendorf(nombre,vida,afinidad,resistencia,plomo,libro,predisposicion,inconsciencia,protagonismo);
+					colegio.add(m1);
+				}else if(partes[0].equalsIgnoreCase("tokenclaw")) {
+					String nombre= partes[1];
+					ArrayList<Hechizo> hechizos=new ArrayList<Hechizo>();
+					int vida = Integer.parseInt(partes[2]);
+					int afinidad = Integer.parseInt(partes[3]);
+					int resistencia = Integer.parseInt(partes[4]);
+					int plomo = Integer.parseInt(partes[5]);
+					int arrojo = Integer.parseInt(partes[6]);
+					int carisma = Integer.parseInt(partes[7]);
+					int pagT = Integer.parseInt(partes[8]);
+					int pagO = Integer.parseInt(partes[9]);
+					for(int i=10;i<partes.length;i+=6) {
+						String tipo =partes[i];
+						String nombre2 = partes[i+1];
+						String descripcion = partes[i+2];
+						int resist = Integer.parseInt(partes[i+3]);
+						int espacio = Integer.parseInt(partes[i+4]);
+						int coste = Integer.parseInt(partes[i+5]);
+						Hechizo hech = new Hechizo(tipo,nombre2,descripcion,resist,espacio,coste);
+						hechizos.add(hech);
+					}
+					LibroHechizos libro = new LibroHechizos(pagT,pagO,hechizos);
+					Mago m1= new Tokenclaw(nombre,vida,afinidad,resistencia,plomo,libro,arrojo,carisma);
+					colegio.add(m1);
+				}else if(partes[0].equalsIgnoreCase("sleeverin")) {
+					String nombre= partes[1];
+					ArrayList<Hechizo> hechizos=new ArrayList<Hechizo>();
+					int vida = Integer.parseInt(partes[2]);
+					int afinidad = Integer.parseInt(partes[3]);
+					int resistencia = Integer.parseInt(partes[4]);
+					int plomo = Integer.parseInt(partes[5]);
+					int sigilo = Integer.parseInt(partes[6]);
+					int venenoso = Integer.parseInt(partes[7]);
+					int hablar = Integer.parseInt(partes[8]);
+					int pagT = Integer.parseInt(partes[9]);
+					int pagO = Integer.parseInt(partes[10]);
+					for(int i=11;i<partes.length;i+=6) {
+						String tipo =partes[i];
+						String nombre2 = partes[i+1];
+						String descripcion = partes[i+2];
+						int resist = Integer.parseInt(partes[i+3]);
+						int espacio = Integer.parseInt(partes[i+4]);
+						int coste = Integer.parseInt(partes[i+5]);
+						Hechizo hech = new Hechizo(tipo,nombre2,descripcion,resist,espacio,coste);
+						hechizos.add(hech);
+					}
+					LibroHechizos libro = new LibroHechizos(pagT,pagO,hechizos);
+					Mago m1= new Sleeverin(nombre,vida,afinidad,resistencia,plomo,libro,sigilo,venenoso,hablar);
+					colegio.add(m1);
+				}else if(partes[0].equalsIgnoreCase("meeplepuf")) {
+					String nombre= partes[1];
+					ArrayList<Hechizo> hechizos=new ArrayList<Hechizo>();
+					int vida = Integer.parseInt(partes[2]);
+					int afinidad = Integer.parseInt(partes[3]);
+					int resistencia = Integer.parseInt(partes[4]);
+					int plomo = Integer.parseInt(partes[5]);
+					int eficiencia = Integer.parseInt(partes[6]);
+					int honor = Integer.parseInt(partes[7]);
+					int pagT = Integer.parseInt(partes[8]);
+					int pagO = Integer.parseInt(partes[9]);
+					for(int i=10;i<partes.length;i+=6) {
+						String tipo =partes[i];
+						String nombre2 = partes[i+1];
+						String descripcion = partes[i+2];
+						int resist = Integer.parseInt(partes[i+3]);
+						int espacio = Integer.parseInt(partes[i+4]);
+						int coste = Integer.parseInt(partes[i+5]);
+						Hechizo hech = new Hechizo(tipo,nombre2,descripcion,resist,espacio,coste);
+						hechizos.add(hech);
+					}
+					LibroHechizos libro = new LibroHechizos(pagT,pagO,hechizos);
+					Mago m1= new Meeplepuf(nombre,vida,afinidad,resistencia,plomo,libro,eficiencia,honor);
+					colegio.add(m1);	
+				}
+			}
+			br.close();
+		}catch(IOException e) {
+			
+		}
+		
 	}
 }

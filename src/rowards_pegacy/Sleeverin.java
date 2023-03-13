@@ -12,6 +12,12 @@ public class Sleeverin extends Mago {
 		this.venenoso=venenoso;
 		this.hablar=hablar;
 	}
+	public Sleeverin(String nombre,int vida, int afinidad,int resistencia,int plomo,LibroHechizos libro, int sigilo,int venenoso, int hablar) {
+		super(nombre,vida,afinidad,resistencia,plomo,libro);
+		this.sigilo=sigilo;
+		this.venenoso=venenoso;
+		this.hablar=hablar;
+	}
 	public void mostrar() {
 		super.mostrar();
 		System.out.println("Casa: "+ casa);

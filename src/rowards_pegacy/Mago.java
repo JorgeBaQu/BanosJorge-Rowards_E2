@@ -24,6 +24,14 @@ private LibroHechizos libro;
 		this.resistencia=resistencia;
 		this.plomo=plomo;
 	}
+	public Mago(String nombre, int vida, int afinidad,int resistencia,int plomo,LibroHechizos libro) {
+		this.nombre=nombre;
+		this.vida=vida;
+		this.afinidad=afinidad;
+		this.resistencia=resistencia;
+		this.plomo=plomo;
+		this.libro=libro;
+	}
 	
 		public String getNombre() {
 		return nombre;

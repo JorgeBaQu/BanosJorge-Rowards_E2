@@ -11,6 +11,12 @@ public class Meeplepuf extends Mago {
 		this.honor=honor;
 		
 	}
+	public Meeplepuf(String nombre,int vida, int afinidad,int resistencia,int plomo,LibroHechizos libro, int eficiencia,int honor) {
+		super(nombre,vida,afinidad,resistencia,plomo,libro);
+		this.eficiencia=eficiencia;
+		this.honor=honor;
+		
+	}
 	public void mostrar() {
 		super.mostrar();
 		System.out.println("Casa: "+ casa);

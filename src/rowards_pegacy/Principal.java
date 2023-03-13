@@ -7,7 +7,7 @@ public class Principal {
 		Scanner sc = new Scanner(System.in);
 		int elegir1;
 		int elegir2;
-		Mago m1 = new Dicendorf("harry",100,30,20,150,12,10,10); 
+		/*Mago m1 = new Dicendorf("harry",100,30,20,150,12,10,10); 
 		Mago m2 = new Meeplepuf("pedro",100,30,20,150,12,10); 
 		Mago m3 = new Sleeverin("juan",100,30,20,150,12,10,10); 
 		Mago m4 = new Tokenclaw("aaron",100,30,20,150,12,10);
@@ -45,12 +45,12 @@ public class Principal {
 		m1.setLibro(l1);
 		m2.setLibro(l3);
 		m3.setLibro(l2);
-		m4.setLibro(l4);
+		m4.setLibro(l4);*/
 		Colegio colegio = new Colegio();
-		colegio.añadir(m1);
+		/*colegio.añadir(m1);
 		colegio.añadir(m2);
 		colegio.añadir(m3);
-		colegio.añadir(m4);
+		colegio.añadir(m4);*/
 		System.out.println("Bienvenido a la plataforma de Rowards Legacy, que desea hacer?");
 		do{
 			System.out.println("1- Gestionar los magos:");
@@ -253,6 +253,7 @@ public class Principal {
 						colegio.guardar();
 						break;
 					case 2:
+						colegio.cargar();
 						break;
 					}
 					break;

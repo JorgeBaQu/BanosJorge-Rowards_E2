@@ -12,6 +12,12 @@ public Dicendorf(String nombre,int vida, int afinidad,int resistencia,int plomo,
 	this.inconsciencia=inconsciencia;
 	this.protagonismo=protagonismo;
 }
+public Dicendorf(String nombre,int vida, int afinidad,int resistencia,int plomo,LibroHechizos libro, int predisposicion,int inconsciencia, int protagonismo) {
+	super(nombre,vida,afinidad,resistencia,plomo,libro);
+	this.predisposicion=predisposicion;
+	this.inconsciencia=inconsciencia;
+	this.protagonismo=protagonismo;
+}
 public void mostrar() {
 	super.mostrar();
 	System.out.println("Casa: "+ casa);

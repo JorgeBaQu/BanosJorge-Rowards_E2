@@ -13,6 +13,12 @@ public class Tokenclaw extends Mago {
 		this.carisma=carisma;
 		
 	}
+	public Tokenclaw(String nombre,int vida, int afinidad,int resistencia,int plomo,LibroHechizos libro, int arrojo,int carisma) {
+		super(nombre,vida,afinidad,resistencia,plomo,libro);
+		this.arrojo=arrojo;
+		this.carisma=carisma;
+		
+	}
 	public void mostrar() {
 		super.mostrar();
 		System.out.println("Casa: "+ casa);

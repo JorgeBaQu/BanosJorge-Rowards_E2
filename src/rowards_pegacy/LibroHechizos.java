@@ -11,6 +11,11 @@ public LibroHechizos() {
 	this.paginasT=100;
 	
 }
+public LibroHechizos(int pagT,int pagO,ArrayList<Hechizo> hechizos) {
+	this.paginasT=pagT;
+	LibroHechizos.paginasO=pagO;
+	this.hechizos=hechizos;
+}
 public int getPaginasT() {
 	return paginasT;
 }
