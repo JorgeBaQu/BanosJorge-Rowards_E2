@@ -58,4 +58,5 @@ public class Sleeverin extends Mago {
 		int bonif=sigilo+hablar;
 		return bonif;
 	}
+	
 }

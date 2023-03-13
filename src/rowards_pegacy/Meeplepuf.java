@@ -1,6 +1,8 @@
 package rowards_pegacy;
 
+
 public class Meeplepuf extends Mago {
+
 	private int eficiencia;
 	private int honor;
 	private int ultima;
@@ -55,4 +57,5 @@ public class Meeplepuf extends Mago {
 		int bonif=eficiencia-honor;
 				return bonif;
 	}
+
 }

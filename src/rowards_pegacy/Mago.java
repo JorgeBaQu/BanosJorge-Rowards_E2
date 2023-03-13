@@ -104,4 +104,5 @@ private LibroHechizos libro;
 	public int confusion() {
 		return 1;
 	}
+	
 }

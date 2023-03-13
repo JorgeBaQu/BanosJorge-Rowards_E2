@@ -56,4 +56,5 @@ public class Tokenclaw extends Mago {
 		int bonif=arrojo-carisma;
 		return bonif;
 	}
+	
 }

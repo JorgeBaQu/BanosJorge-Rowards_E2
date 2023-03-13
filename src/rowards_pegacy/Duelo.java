@@ -22,6 +22,8 @@ public void pelea() {
 	boolean confusion2 = false;
 	int turnos1 = 0;
 	int turnos2 = 0;
+	int tecnica1 = 0;
+	int tecnica2 =0;
 	Hechizo h1 = null;
 	while(vida1>=0&&vida2>=0) {
 		System.out.println("Vida de "+ m1.getNombre()+": "+ vida1);
@@ -96,6 +98,16 @@ public void pelea() {
 			}
 			break;
 		case 2:
+			if(m1 instanceof Dicendorf) {
+				tecnica1 = 1;
+			}else if(m1 instanceof Meeplepuf) {
+				tecnica1 = 1;
+			}else if(m1 instanceof Sleeverin) {
+				tecnica1 = 1;
+			}else if(m1 instanceof Tokenclaw) {
+				tecnica1 = 2;
+			}
+			
 			break;
 		case 3:
 			System.out.println("El combate ha acabado, " + m1.getNombre() + " ha huido.");

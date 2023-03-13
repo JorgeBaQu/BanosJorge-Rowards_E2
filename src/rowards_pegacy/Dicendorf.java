@@ -62,4 +62,5 @@ public int confusion() {
 	int bonif=protagonismo-inconsciencia;
 			return bonif;
 }
+
 }
