@@ -1,4 +1,4 @@
 dicendorf;harry;30;300;10;150;120;100;100;100;13;s;curar+;Te cura un poco de vida y afinidad;6;7;10;a;ataque+++;Hace mucho daño;20;2;30;c;confundir+++;Mucha posibilidad de confundir al enemigo;6;2;10;d;Defensa;te suma 1 de defensa;6;2;10
-meeplepuf;pedro;30;300;10;150;120;100;100;8;s;curar++;Te cura vida y afinidad;4;2;15;a;ataque+;Hace poco daño;6;2;10;c;confundir++;Posibilidad de confundir al enemigo;6;2;10;d;Defensa;te suma 1 de defensa;6;2;10
-sleeverin;juan;30;300;10;150;120;100;100;100;6;a;ataque++;Hace daño;4;2;20;c;confundir+;Pequeña posibilidad de confundir al enemigo;6;2;10;d;Defensa;te suma 1 de defensa;6;2;10
-tokenclaw;aaron;30;300;10;150;120;100;100;8;s;curar+++;Te cura mucha vida y afinidad;1;2;20;a;ataque+;Hace poco daño;6;2;10;c;confundir+;Pequeña posibilidad de confundir al enemigo;6;2;10;d;Defensa;te suma 1 de defensa;6;2;10
+meeplepuf;pedro;30;300;10;150;120;100;100;8;s;curar++;Te cura vida y afinidad;8;2;15;a;ataque+;Hace poco daño;6;2;10;c;confundir++;Posibilidad de confundir al enemigo;6;2;10;d;Defensa;te suma 1 de defensa;6;2;10
+sleeverin;juan;30;300;10;150;120;100;100;100;7;a;ataque++;Hace daño;10;2;20;c;confundir+;Pequeña posibilidad de confundir al enemigo;6;2;10;d;Defensa;te suma 1 de defensa;6;2;10;a;Bola de fuego;gana de 1;50;1;1
+tokenclaw;aaron;30;300;10;150;120;100;100;8;s;curar+++;Te cura mucha vida y afinidad;14;2;20;a;ataque+;Hace poco daño;6;2;10;c;confundir+;Pequeña posibilidad de confundir al enemigo;6;2;10;d;Defensa;te suma 1 de defensa;6;2;10

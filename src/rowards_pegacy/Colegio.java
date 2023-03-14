@@ -442,6 +442,49 @@ File backup = new File ("backup/backup.txt");
 		}
 		return ma;
 	}
+	public void casaHechizo(String casa,String hechizo) {
+		if(casa.equalsIgnoreCase("Dicendorf")){
+			for(Mago m: colegio) {
+				if(m instanceof Dicendorf) {
+					for(Hechizo h: m.getLibro().hechizos) {
+						if(h.getNombre().equalsIgnoreCase(hechizo)) {
+							System.out.println(m.getNombre());
+						}
+					}
+				}
+			}
+		}else if(casa.equalsIgnoreCase("Meeplepuf")){
+				for(Mago m: colegio) {
+					if(m instanceof Meeplepuf) {
+						for(Hechizo h: m.getLibro().hechizos) {
+							if(h.getNombre().equalsIgnoreCase(hechizo)) {
+								System.out.println(m.getNombre());
+							}
+						}
+					}
+				}
+			}else if(casa.equalsIgnoreCase("Sleeverin")){
+				for(Mago m: colegio) {
+					if(m instanceof Sleeverin) {
+						for(Hechizo h: m.getLibro().hechizos) {
+							if(h.getNombre().equalsIgnoreCase(hechizo)) {
+								System.out.println(m.getNombre());
+							}
+						}
+					}
+				}
+			}else if(casa.equalsIgnoreCase("Tokenclaw")){
+				for(Mago m: colegio) {
+					if(m instanceof Tokenclaw) {
+						for(Hechizo h: m.getLibro().hechizos) {
+							if(h.getNombre().equalsIgnoreCase(hechizo)) {
+								System.out.println(m.getNombre());
+							}
+						}
+					}
+				}
+			} 
+	}
 	public static int pedirInt(Scanner sca) {
 		int num = 0;
 		boolean valido = false;

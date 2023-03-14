@@ -10,20 +10,20 @@ public class Principal {
 		int elegir2;
 		Colegio colegio = new Colegio();
 		//Asi añadí los magos al principio.
-		Mago m1 = new Dicendorf("harry",30,300,10,150,120,100,100); 
+		/*Mago m1 = new Dicendorf("harry",30,300,10,150,120,100,100); 
 		Mago m2 = new Meeplepuf("pedro",30,300,10,150,120,100); 
 		Mago m3 = new Sleeverin("juan",30,300,10,150,120,100,100); 
 		Mago m4 = new Tokenclaw("aaron",30,300,10,150,120,100);
 		Hechizo h1 = new Hechizo("s","curar+","Te cura un poco de vida y afinidad",6,7,10);
-		Hechizo h2 = new Hechizo("s","curar++","Te cura vida y afinidad",4,2,15);
-		Hechizo h3 = new Hechizo("s","curar+++","Te cura mucha vida y afinidad",1,2,20);
+		Hechizo h2 = new Hechizo("s","curar++","Te cura vida y afinidad",8,2,15);
+		Hechizo h3 = new Hechizo("s","curar+++","Te cura mucha vida y afinidad",14,2,20);
 		Hechizo h4 = new Hechizo("a","ataque+","Hace poco daño",6,2,10);
-		Hechizo h5 = new Hechizo("a","ataque++","Hace daño",4,2,20);
+		Hechizo h5 = new Hechizo("a","ataque++","Hace daño",10,2,20);
 		Hechizo h6 = new Hechizo("a","ataque+++","Hace mucho daño",20,2,30);
 		Hechizo h7 = new Hechizo("c","confundir+","Pequeña posibilidad de confundir al enemigo",6,2,10);
 		Hechizo h8 = new Hechizo("c","confundir++","Posibilidad de confundir al enemigo",6,2,10);
 		Hechizo h9 = new Hechizo("c","confundir+++","Mucha posibilidad de confundir al enemigo",6,2,10);
-		Hechizo h10 = new Hechizo("a","Bola de fuego","gana de 1",1,1,1);
+		Hechizo h10 = new Hechizo("a","Bola de fuego","gana de 1",50,1,1);
 		Hechizo h11 = new Hechizo("d","Defensa","te suma 1 de defensa",6,2,10);
 		LibroHechizos l1= new LibroHechizos();
 		LibroHechizos l2= new LibroHechizos();
@@ -36,6 +36,7 @@ public class Principal {
 		l2.añadir(h5);
 		l2.añadir(h7);
 		l2.añadir(h11);
+		l2.añadir(h10);
 		l3.añadir(h2);
 		l3.añadir(h4);
 		l3.añadir(h8);
@@ -51,7 +52,7 @@ public class Principal {
 		colegio.añadir(m1);
 		colegio.añadir(m2);
 		colegio.añadir(m3);
-		colegio.añadir(m4);
+		colegio.añadir(m4);*/
 		
 
 		System.out.println("Bienvenido a la plataforma de Rowards Legacy, que desea hacer?");
@@ -69,7 +70,7 @@ public class Principal {
 					System.out.println("3- Modificar un mago:");
 					System.out.println("4- Añadir un mago:");
 					System.out.println("5- Eliminar un mago:");
-					System.out.println("6- Mostrar un mago dada su casa y un hechizo que tenga:");
+					System.out.println("6- Mostrar un listado de magos dada su casa y un hechizo que tenga:");
 					elegir2 =pedirInt(sc);
 					switch (elegir2) {
 						case 1:
@@ -151,7 +152,13 @@ public class Principal {
 							colegio.eliminar(eliminar);
 							break;
 						case 6:
-							
+							System.out.println("De que casa quieres consultar?: ");
+							String casa = sc.next();
+							sc.nextLine();
+							System.out.println("Introduce el hechizo que quieres que tenga: ");
+							String hechizo = sc.next();
+							sc.nextLine();
+							colegio.casaHechizo(casa, hechizo);
 							break;
 					}
 					break;
