@@ -1,4 +1,5 @@
 package rowards_pegacy;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Principal {
 
@@ -60,8 +61,7 @@ public class Principal {
 			System.out.println("3- Crear un duelo:");
 			System.out.println("4- Guardar los datos:");
 			System.out.println("5- Salir:");
-			elegir1=sc.nextInt();
-			sc.nextLine();
+			elegir1=pedirInt(sc);
 			switch (elegir1) {
 				case 1:
 					System.out.println("1- Mostrar una lista de los magos:");
@@ -70,8 +70,7 @@ public class Principal {
 					System.out.println("4- Añadir un mago:");
 					System.out.println("5- Eliminar un mago:");
 					System.out.println("6- Mostrar un mago dada su casa y un hechizo que tenga:");
-					elegir2 =sc.nextInt();
-					sc.nextLine();
+					elegir2 =pedirInt(sc);
 					switch (elegir2) {
 						case 1:
 							colegio.mostrar();
@@ -93,58 +92,53 @@ public class Principal {
 							String nombre = sc.next();
 							sc.nextLine();
 							System.out.println("Introduce la vida: ");
-							int vida = sc.nextInt();
-							sc.nextLine();
+							int vida = pedirInt(sc);
 							System.out.println("Introduce la afinidad: ");
-							int afinidad = sc.nextInt();
-							sc.nextLine();
+							int afinidad =pedirInt(sc);
 							System.out.println("Introduce la resistencia: ");
-							int resistencia = sc.nextInt();
-							sc.nextLine();
+							int resistencia = pedirInt(sc);
 							System.out.println("Introduce el plomo: ");
-							int plomo = sc.nextInt();
-							sc.nextLine();
+							int plomo =pedirInt(sc);
 							System.out.println("De que casa deseas crear el mago?: ");
 							System.out.println("1- Dicendorf.");
 							System.out.println("2- Tokenclaw.");
 							System.out.println("3- Sleeverin.");
 							System.out.println("4- Meeplepuf.");
-							int elegir3 = sc.nextInt();
-							sc.nextLine();
+							int elegir3 =pedirInt(sc);
 							switch(elegir3) {
 								case 1:
 									System.out.println("Introduce la predisposicion");
-									int predisposicion = sc.nextInt();
+									int predisposicion = pedirInt(sc);
 									System.out.println("Introduce la inconsciencia");
-									int inconsciencia = sc.nextInt();
+									int inconsciencia = pedirInt(sc);
 									System.out.println("Introduce el protagonismo");
-									int protagonismo = sc.nextInt();
+									int protagonismo = pedirInt(sc);
 									Mago anadirD = new Dicendorf(nombre,vida,afinidad,resistencia,plomo,predisposicion,inconsciencia,protagonismo);
 									colegio.añadir2(anadirD);
 									break;
 								case 2:
 									System.out.println("Introduce la eficiencia");
-									int eficiencia = sc.nextInt();
+									int eficiencia = pedirInt(sc);
 									System.out.println("Introduce el honor");
-									int honor = sc.nextInt();
+									int honor = pedirInt(sc);
 									Mago anadirM = new Meeplepuf(nombre,vida,afinidad,resistencia,plomo,eficiencia,honor);
 									colegio.añadir2(anadirM);
 									break;
 								case 3:
 									System.out.println("Introduce la sigilo");
-									int sigilo = sc.nextInt();
+									int sigilo = pedirInt(sc);
 									System.out.println("Introduce el venenoso");
-									int venenoso = sc.nextInt();
+									int venenoso = pedirInt(sc);
 									System.out.println("Introduce el hablar");
-									int hablar = sc.nextInt();
+									int hablar = pedirInt(sc);
 									Mago anadirS = new Sleeverin(nombre,vida,afinidad,resistencia,plomo,sigilo,venenoso,hablar);
 									colegio.añadir2(anadirS);
 									break;
 								case 4:
 									System.out.println("Introduce el arrojo");
-									int arrojo = sc.nextInt();
+									int arrojo = pedirInt(sc);
 									System.out.println("Introduce el carisma");
-									int carisma = sc.nextInt();
+									int carisma = pedirInt(sc);
 									Mago anadirT = new Tokenclaw(nombre,vida,afinidad,resistencia,plomo,arrojo,carisma);
 									colegio.añadir2(anadirT);
 									break;
@@ -167,7 +161,7 @@ public class Principal {
 					System.out.println("3- Añadir hechizos a un mago:");
 					System.out.println("4- Modificar un hechizo:");
 					System.out.println("5- Eliminar un hechizo de un mago:");
-						int elegir4 = sc.nextInt();
+						int elegir4 = pedirInt(sc);
 						sc.nextLine();
 						switch (elegir4) {
 							case 1:
@@ -188,8 +182,7 @@ public class Principal {
 								System.out.println("2- Ataque.");
 								System.out.println("3- Defensa.");
 								System.out.println("4- Confusion.");
-								int elegir6 = sc.nextInt();
-								sc.nextLine();
+								int elegir6 = pedirInt(sc);
 								String tipo="";
 								switch (elegir6) {
 									case 1:
@@ -213,14 +206,11 @@ public class Principal {
 								String descripcionH= sc.next();
 								sc.nextLine();
 								System.out.println("Introduce la resistencia del hechizo: ");
-								int resistH= sc.nextInt();
-								sc.nextLine();
+								int resistH= pedirInt(sc);
 								System.out.println("Introduce el espacio del hechizo: ");
-								int espacioH= sc.nextInt();
-								sc.nextLine();
+								int espacioH= pedirInt(sc);
 								System.out.println("Introduce el coste del hechizo: ");
-								int costeH= sc.nextInt();
-								sc.nextLine();
+								int costeH= pedirInt(sc);
 								Hechizo hech = new Hechizo(tipo,nombreH,descripcionH,resistH,espacioH,costeH);
 								colegio.añadirHech(nombreM, hech);
 								break;
@@ -254,8 +244,8 @@ public class Principal {
 					break;
 				case 4:
 					System.out.println("Deseas guardar los datos(1) o cargar el backup(2)?");
-					int elegir7=sc.nextInt();
-					sc.nextLine();
+					int elegir7=pedirInt(sc);
+					
 					switch (elegir7) {
 					case 1:
 						colegio.guardar();
@@ -267,6 +257,21 @@ public class Principal {
 					break;
 			}
 		}while(elegir1!=5);
+		sc.close();
 	}
-
+	public static int pedirInt(Scanner sca) {
+		int num = 0;
+		boolean valido = false;
+		while(!valido) {
+			try {
+				num = sca.nextInt();
+				sca.nextLine();
+				valido = true;
+			}catch(InputMismatchException e) {
+				System.out.println("Introduce un numero valido:");
+				sca.next();
+			}
+		}	
+		return num;
+	}
 }
