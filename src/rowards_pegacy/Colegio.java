@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 
 public class Colegio {
 Scanner sc = new Scanner(System.in);
@@ -60,8 +61,7 @@ File backup = new File ("backup/backup.txt");
 						System.out.println("7. Inconsciencia.");
 						System.out.println("8. Protagonismo.");
 						System.out.println("9. Cerrar.");
-						elegir2=sc.nextInt();
-						sc.nextLine();
+						elegir2=pedirInt(sc);
 						switch(elegir2) {
 						case 1:
 							System.out.println("Introduce el nuevo nombre:");
@@ -69,31 +69,31 @@ File backup = new File ("backup/backup.txt");
 							break;
 						case 2:
 							System.out.println("Introduce la nueva vida:");
-							colegio.get(i).setVida(sc.nextInt());
+							colegio.get(i).setVida(pedirInt(sc));
 							break;
 						case 3:
 							System.out.println("Introduce la nueva afinidad:");
-							colegio.get(i).setAfinidad(sc.nextInt());
+							colegio.get(i).setAfinidad(pedirInt(sc));
 							break;
 						case 4:
 							System.out.println("Introduce la nueva resistencia:");
-							colegio.get(i).setResistencia(sc.nextInt());
+							colegio.get(i).setResistencia(pedirInt(sc));
 							break;
 						case 5:
 							System.out.println("Introduce el nuevo plomo:");
-							colegio.get(i).setPlomo(sc.nextInt());
+							colegio.get(i).setPlomo(pedirInt(sc));
 							break;
 						case 6:
 							System.out.println("Introduce la nueva predisposicion:");
-							((Dicendorf)colegio.get(i)).setPredisposicion(sc.nextInt());
+							((Dicendorf)colegio.get(i)).setPredisposicion(pedirInt(sc));
 							break;
 						case 7:
 							System.out.println("Introduce la nueva inconsciencia:");
-							((Dicendorf)colegio.get(i)).setInconsciencia(sc.nextInt());
+							((Dicendorf)colegio.get(i)).setInconsciencia(pedirInt(sc));
 							break;
 						case 8:
 							System.out.println("Introduce el nuevo protagonismo:");
-							((Dicendorf)colegio.get(i)).setProtagonismo(sc.nextInt());
+							((Dicendorf)colegio.get(i)).setProtagonismo(pedirInt(sc));
 							break;
 						}
 					}while(elegir2!=9);
@@ -108,8 +108,7 @@ File backup = new File ("backup/backup.txt");
 						System.out.println("6. Arrojo.");
 						System.out.println("7. Carisma.");
 						System.out.println("8. Cerrar.");
-						elegir2=sc.nextInt();
-						sc.nextLine();
+						elegir2=pedirInt(sc);
 						switch(elegir2) {
 						case 1:
 							System.out.println("Introduce el nuevo nombre:");
@@ -117,27 +116,27 @@ File backup = new File ("backup/backup.txt");
 							break;
 						case 2:
 							System.out.println("Introduce la nueva vida:");
-							colegio.get(i).setVida(sc.nextInt());
+							colegio.get(i).setVida(pedirInt(sc));
 							break;
 						case 3:
 							System.out.println("Introduce la nueva afinidad:");
-							colegio.get(i).setAfinidad(sc.nextInt());
+							colegio.get(i).setAfinidad(pedirInt(sc));
 							break;
 						case 4:
 							System.out.println("Introduce la nueva resistencia:");
-							colegio.get(i).setResistencia(sc.nextInt());
+							colegio.get(i).setResistencia(pedirInt(sc));
 							break;
 						case 5:
 							System.out.println("Introduce el nuevo plomo:");
-							colegio.get(i).setPlomo(sc.nextInt());
+							colegio.get(i).setPlomo(pedirInt(sc));
 							break;
 						case 6:
 							System.out.println("Introduce el nuevo arrojo:");
-							((Tokenclaw)colegio.get(i)).setArrojo(sc.nextInt());
+							((Tokenclaw)colegio.get(i)).setArrojo(pedirInt(sc));
 							break;
 						case 7:
 							System.out.println("Introduce la nueva carisma:");
-							((Tokenclaw)colegio.get(i)).setCarisma(sc.nextInt());
+							((Tokenclaw)colegio.get(i)).setCarisma(pedirInt(sc));
 							break;
 						}
 					}while(elegir2!=8);
@@ -153,8 +152,7 @@ File backup = new File ("backup/backup.txt");
 						System.out.println("7. Venenoso.");
 						System.out.println("8. Hablar.");
 						System.out.println("9. Cerrar.");
-						elegir2=sc.nextInt();
-						sc.nextLine();
+						elegir2=pedirInt(sc);
 						switch(elegir2) {
 						case 1:
 							System.out.println("Introduce el nuevo nombre:");
@@ -162,31 +160,31 @@ File backup = new File ("backup/backup.txt");
 							break;
 						case 2:
 							System.out.println("Introduce la nueva vida:");
-							colegio.get(i).setVida(sc.nextInt());
+							colegio.get(i).setVida(pedirInt(sc));
 							break;
 						case 3:
 							System.out.println("Introduce la nueva afinidad:");
-							colegio.get(i).setAfinidad(sc.nextInt());
+							colegio.get(i).setAfinidad(pedirInt(sc));
 							break;
 						case 4:
 							System.out.println("Introduce la nueva resistencia:");
-							colegio.get(i).setResistencia(sc.nextInt());
+							colegio.get(i).setResistencia(pedirInt(sc));
 							break;
 						case 5:
 							System.out.println("Introduce el nuevo plomo:");
-							colegio.get(i).setPlomo(sc.nextInt());
+							colegio.get(i).setPlomo(pedirInt(sc));
 							break;
 						case 6:
 							System.out.println("Introduce el nuevo sigilo:");
-							((Sleeverin)colegio.get(i)).setSigilo(sc.nextInt());
+							((Sleeverin)colegio.get(i)).setSigilo(pedirInt(sc));
 							break;
 						case 7:
 							System.out.println("Introduce el nuevo venenoso:");
-							((Sleeverin)colegio.get(i)).setVenenoso(sc.nextInt());
+							((Sleeverin)colegio.get(i)).setVenenoso(pedirInt(sc));
 							break;
 						case 8:
 							System.out.println("Introduce el nuevo hablar:");
-							((Sleeverin)colegio.get(i)).setHablar(sc.nextInt());
+							((Sleeverin)colegio.get(i)).setHablar(pedirInt(sc));
 							break;
 						}
 					}while(elegir2!=9);
@@ -201,8 +199,7 @@ File backup = new File ("backup/backup.txt");
 						System.out.println("6. Eficiencia.");
 						System.out.println("7. Honor.");
 						System.out.println("8. Cerrar.");
-						elegir2=sc.nextInt();
-						sc.nextLine();
+						elegir2=pedirInt(sc);
 						switch(elegir2) {
 						case 1:
 							System.out.println("Introduce el nuevo nombre:");
@@ -210,27 +207,27 @@ File backup = new File ("backup/backup.txt");
 							break;
 						case 2:
 							System.out.println("Introduce la nueva vida:");
-							colegio.get(i).setVida(sc.nextInt());
+							colegio.get(i).setVida(pedirInt(sc));
 							break;
 						case 3:
 							System.out.println("Introduce la nueva afinidad:");
-							colegio.get(i).setAfinidad(sc.nextInt());
+							colegio.get(i).setAfinidad(pedirInt(sc));
 							break;
 						case 4:
 							System.out.println("Introduce la nueva resistencia:");
-							colegio.get(i).setResistencia(sc.nextInt());
+							colegio.get(i).setResistencia(pedirInt(sc));
 							break;
 						case 5:
 							System.out.println("Introduce el nuevo plomo:");
-							colegio.get(i).setPlomo(sc.nextInt());
+							colegio.get(i).setPlomo(pedirInt(sc));
 							break;
 						case 6:
 							System.out.println("Introduce la nueva eficiencia:");
-							((Meeplepuf)colegio.get(i)).setEficiencia(sc.nextInt());
+							((Meeplepuf)colegio.get(i)).setEficiencia(pedirInt(sc));
 							break;
 						case 7:
 							System.out.println("Introduce el nuevo honor:");
-							((Meeplepuf)colegio.get(i)).setHonor(sc.nextInt());
+							((Meeplepuf)colegio.get(i)).setHonor(pedirInt(sc));
 							break;
 	
 						}
@@ -271,8 +268,10 @@ File backup = new File ("backup/backup.txt");
 			}
 		}
 		if(comprobar) {
-			colegio.get(a).añadirHech(hechizo);
-		}else System.out.println("El hechizo no ha sido añadido, escribe bien el nombre del mago");
+			if(hechizo.getTipo().equals("s") && colegio.get(a) instanceof Sleeverin) {
+				System.out.println("Un mago de Sleeverin no puede tener un hechizo de sanacion.");
+			}else colegio.get(a).añadirHech(hechizo);
+		}else System.out.println("El hechizo no ha sido añadido, escribe bien el nombre del mago.");
 	}
 	public void modificarHech(String nombre, String nombreH) {
 		boolean comprobar=false;
@@ -443,5 +442,19 @@ File backup = new File ("backup/backup.txt");
 		}
 		return ma;
 	}
-	
+	public static int pedirInt(Scanner sca) {
+		int num = 0;
+		boolean valido = false;
+		while(!valido) {
+			try {
+				num = sca.nextInt();
+				sca.nextLine();
+				valido = true;
+			}catch(InputMismatchException e) {
+				System.out.println("Introduce un numero valido:");
+				sca.next();
+			}
+		}	
+		return num;
+	}
 }
